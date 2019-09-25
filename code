@@ -6,8 +6,7 @@ Created on Tue Sep 24 22:09:02 2019
 @author: TristenROBrien
 """
 import random
-import collections
-import numpy as np
+
 
 
 def birthday():
@@ -15,7 +14,7 @@ def birthday():
     no = 0 #This will be used if there is no birthday match in our test
     tries = 0 #This is used to track how many tests we run
 
-    while tries <30: #This number can be changed if you want to run more tests
+    while tries <100: #This number can be changed if you want to run more tests
         x = [] #This stores our results
         for i in range(30): #Thirty people in a room
             birthday = (random.randint(1,366)) #Randomly chooses 30 birthdays 
@@ -29,8 +28,7 @@ def birthday():
             no = no + 1
 
         tries = tries + 1
-        percent = str(yes/(yes+no)*100)
-        percent = percent[:5] #Getting the percentage
+        percent = str(yes/(yes+no)*100)[:5] #percentage
 
     print ('Out of 30 people, there\'s a ' + percent + '% chance of two people having the same birthday.')
 
